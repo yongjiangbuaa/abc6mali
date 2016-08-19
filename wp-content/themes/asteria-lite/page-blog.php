@@ -58,6 +58,7 @@ Template Name: Blog Page Template
                     <!--POST INFO START-->
                     <div class="single_metainfo">
                     <i class="fa-calendar"></i><a class="comm_date"><?php the_time( get_option('date_format') ); ?></a>
+                    <?php if(function_exists('the_views')) {the_views();} ?>
                     <i class="fa-user"></i><a class="meta_auth"><?php the_author(); ?></a>
                     <?php if (!empty($post->post_password)) { ?>
                 	<?php } else { ?>
