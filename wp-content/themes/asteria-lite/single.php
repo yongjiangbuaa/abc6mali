@@ -27,6 +27,7 @@
                         <?php if (!empty ($asteria['post_info_id'])) { ?>
                         <div class="single_metainfo">
                             <i class="fa-calendar"></i><a class="comm_date"><?php the_time( get_option('date_format') ); ?></a>
+                            <?php if(function_exists('the_views')) {the_views();} ?>
                             <i class="fa-user"></i><?php global $authordata; $post_author = "<a class='auth_meta' href=\"".get_author_posts_url( $authordata->ID, $authordata->user_nicename )."\">".get_the_author()."</a>\r\n"; echo $post_author; ?>
 						<?php if (!empty($post->post_password)) { ?>
                         <?php } else { ?>
